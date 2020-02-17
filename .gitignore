@@ -1,5 +1,8 @@
 coco_dataset/
 code/.ipynb_checkpoints/
 code/.vscode/
-code/__pycache__/
+__pycache__/
+*.pyc
 another_code/
+code/dataloaders/datasets/coco_dataset/
+code/run/

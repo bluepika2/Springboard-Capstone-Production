@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
-def decode_seg_map_sequence(label_masks, dataset='pascal'):
+def decode_seg_map_sequence(label_masks, dataset='coco'):
     rgb_masks = []
     for label_mask in label_masks:
         rgb_mask = decode_segmap(label_mask, dataset)
@@ -11,7 +11,7 @@ def decode_seg_map_sequence(label_masks, dataset='pascal'):
     return rgb_masks
 
 
-def decode_segmap(label_mask, plot=False):
+def decode_segmap(label_mask, dataset, plot=False):
     """Decode segmentation class labels into a color image
     Args:
         label_mask (np.ndarray): an (M,N) array of integer values denoting
@@ -21,10 +21,11 @@ def decode_segmap(label_mask, plot=False):
     Returns:
         (np.ndarray, optional): the resulting decoded color image.
     """
-   
-    n_classes = 21
-    label_colours = get_pascal_labels()   
-
+    if dataset == 'coco':
+        n_classes = 21
+        label_colours = get_pascal_labels()   
+    else:
+        raise NotImplementedError
     r = label_mask.copy()
     g = label_mask.copy()
     b = label_mask.copy()
