@@ -57,10 +57,10 @@ class UNet(nn.Module):
         self.dec2 = _DecoderBlock(256, 128, 64)
         self.dec1 = nn.Sequential(
             nn.Conv2d(128, 64, kernel_size=3),
-            nn.BatchNorm2d(64),
+            BatchNorm(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(64, 64, kernel_size=3),
-            nn.BatchNorm2d(64),
+            BatchNorm(64),
             nn.ReLU(inplace=True),
         )
         self.final = nn.Conv2d(64, num_classes, kernel_size=1)
@@ -82,7 +82,7 @@ class UNet(nn.Module):
     def _init_weight(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear):
-                nn.init.kaiming_normal(m.weight)
+                nn.init.kaiming_normal_(m.weight)
                 if m.bias is not None:
                     m.bias.data.zero_()
             elif isinstance(m, nn.BatchNorm2d):
