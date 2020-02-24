@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from torch.utils.data import Dataset
+from mypath import Path
 from tqdm import trange
 import os
 from pycocotools.coco import COCO
@@ -16,7 +17,7 @@ class COCOSegmentation(Dataset):
         1, 64, 20, 63, 7, 72] # set the lower number of classes for a trial
 
     def __init__(self, args,
-                 base_dir='dataloaders/datasets/coco_dataset/',
+                 base_dir=Path.db_root_dir('coco'),
                  split='train',
                  year='2017'):
         super().__init__()
