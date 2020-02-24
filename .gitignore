@@ -1,8 +1,8 @@
-coco_dataset/
 code/.ipynb_checkpoints/
 code/.vscode/
 __pycache__/
 *.pyc
 another_code/
 code/dataloaders/datasets/coco_dataset/
+code/modeling/deeplab-resnet.pth.tar
 code/run/
