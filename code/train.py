@@ -170,9 +170,9 @@ def main():
     parser.add_argument('--backbone', type=str, default='resnet',
                             help='backbone name (default: resnet)')
     parser.add_argument('--out-stride', type=int, default=16,
-                            help='network output stride (default: 8)')
+                            help='network output stride (default: 16)')
     parser.add_argument('--dataset', type=str, default='coco',
-                            help='dataset name (default: pascal)')
+                            help='dataset name (default: coco)')
     parser.add_argument('--workers', type=int, default=4,
                             metavar='N', help='dataloader threads')
     parser.add_argument('--base-size', type=int, default=513,
