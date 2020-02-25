@@ -6,7 +6,7 @@
 | :-------- | :------------: |:---------: |:--------------:|
 | ResNet    | 16/16          | 58.3%      | [google drive](https://drive.google.com/open?id=1ekHSU34le7G3pk7MT_aohMQlLq9_cDCR)  |
 
-### Introduction
+## Introduction
 This is a PyTorch implementation of Deeplab V+3 based on COCO dataset. Currently, I am transferring Jupyter Notebook to python modules.
 ![Results](doc/results.png)
 
@@ -22,9 +22,9 @@ This is a PyTorch implementation of Deeplab V+3 based on COCO dataset. Currently
 - **Cosine learning rate**: The learning rate decrease in the form of half a cosine curve
 
 <p align="center">
-  <img src="doc/poly.png" width="300" />
-  <img src="doc/stepdecay.png" width="300" /> 
-  <img src="doc/cosine.png" width="300" />
+  <img src="doc/poly.png" width="250" />
+  <img src="doc/stepdecay.png" width="250" /> 
+  <img src="doc/cosine.png" width="250" />
 </p>
 
 ### Data augmentation
@@ -61,16 +61,16 @@ The predictions will be saved as `.jpg` images using the default palette in the 
 
 ### Result examples
 <p align="center">
-  <img src="code/test2017/000000000016.png" width="400" />
-  <img src="code/inference_results/inference000000000016.png" width="400" /> 
+  <img src="doc/000000000016.png" width="400" />
+  <img src="doc/inference000000000016.png" width="400" /> 
 </p>
 <p align="center">
-  <img src="code/test2017/000000000019.png" width="400" />
-  <img src="code/inference_results/inference000000000019.png" width="400" /> 
+  <img src="doc/000000000019.png" width="400" />
+  <img src="doc/inference000000000019.png" width="400" /> 
 </p>
 <p align="center">
-  <img src="code/test2017/000000024941.png" width="400" />
-  <img src="code/inference_results/inference000000024941.png" width="400" /> 
+  <img src="doc/000000024941.png" width="400" />
+  <img src="doc/inference000000024941.png" width="400" /> 
 </p>
 
 ## Code Structure
