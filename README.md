@@ -22,9 +22,9 @@ This is a PyTorch implementation of Deeplab V+3 based on COCO dataset. Currently
 - **Cosine learning rate**: The learning rate decrease in the form of half a cosine curve
 
 <p align="center">
-  <img src="doc/poly.png" width="200" />
-  <img src="doc/stepdecay.png" width="200" /> 
-  <img src="doc/cosine.png" width="200" />
+  <img src="doc/poly.png" width="300" />
+  <img src="doc/stepdecay.png" width="300" /> 
+  <img src="doc/cosine.png" width="300" />
 </p>
 
 ### Data augmentation
@@ -61,6 +61,46 @@ The predictions will be saved as `.jpg` images using the default palette in the 
 
 ### Result examples
 <p align="center">
-  <img src="code/test2017/000000000016.png" width="300" />
-  <img src="code/inference_results/inference000000000016.png" width="300" /> 
+  <img src="code/test2017/000000000016.png" width="400" />
+  <img src="code/inference_results/inference000000000016.png" width="400" /> 
 </p>
+<p align="center">
+  <img src="code/test2017/000000000019.png" width="400" />
+  <img src="code/inference_results/inference000000000019.png" width="400" /> 
+</p>
+<p align="center">
+  <img src="code/test2017/000000024941.png" width="400" />
+  <img src="code/inference_results/inference000000024941.png" width="400" /> 
+</p>
+
+## Code Structure
+  ```
+  code/
+  │
+  ├── train.py - main script to start training
+  ├── inference.py - inference using a trained model
+  ├── mypath.py - to define dataset directory
+  │
+  ├── dataloader/ - loading the data for different segmentation datasets
+  │   ├── custom_transforms.py - include transform function for data augmentation
+  │   └── utils.py - helper function to encode and decode images
+  │
+  ├── modeling/ - contains semantic segmentation models
+  │   ├── deeplab.py - include main structure for deeplab network
+  │   ├── aspp.py - include atrous spatial pyramid pooling structure
+  │   └── decoder.py - include transposed convolution parts for decoder
+  │  
+  └── utils/ - small utility functions
+      ├── losses.py - losses used in training the model
+      ├── metrics.py - evaluation metrics used
+      ├── saver.py - helper function to save parameters and model progress
+      ├── summaries.py - create tensorboard summary from results
+      └── lr_scheduler.py - learning rate schedulers 
+  ```
+  
+## Acknowledgement
+[PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
+
+[Synchronized-BatchNorm-PyTorch](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch)
+
+[drn](https://github.com/fyu/drn)
