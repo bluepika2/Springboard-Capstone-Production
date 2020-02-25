@@ -61,16 +61,16 @@ The predictions will be saved as `.jpg` images using the default palette in the 
 
 ### Result examples
 <p align="center">
-  <img src="doc/000000000016.png" width="300" />
-  <img src="doc/inference000000000016.png" width="300" /> 
+  <img src="doc/000000000016.jpg" width="300" />
+  <img src="doc/inference000000000016.jpg" width="300" /> 
 </p>
 <p align="center">
-  <img src="doc/000000000019.png" width="300" />
-  <img src="doc/inference000000000019.png" width="300" /> 
+  <img src="doc/000000000019.jpg" width="300" />
+  <img src="doc/inference000000000019.jpg" width="300" /> 
 </p>
 <p align="center">
-  <img src="doc/000000024941.png" width="300" />
-  <img src="doc/inference000000024941.png" width="300" /> 
+  <img src="doc/000000024941.jpg" width="300" />
+  <img src="doc/inference000000024941.jpg" width="300" /> 
 </p>
 
 ## Code Structure
