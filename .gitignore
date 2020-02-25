@@ -1,5 +1,5 @@
-code/.ipynb_checkpoints/
-code/.vscode/
+.ipynb_checkpoints
+.vscode
 __pycache__/
 *.pyc
 another_code/
