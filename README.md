@@ -7,8 +7,8 @@
 | ResNet    | 16/16          | 58.3%      | [google drive](https://drive.google.com/open?id=1ekHSU34le7G3pk7MT_aohMQlLq9_cDCR)  |
 
 <p align="center">
-  <img src="doc/web_main.png" width="400" height="200" />
-  <img src="doc/web_result.png" width="250" height="350" /> 
+  <img src="doc/web_main.png" width="500" height="300" />
+  <img src="doc/web_result.png" width="200" height="300" /> 
 </p>
 
 ## Running on local/cloud machine
