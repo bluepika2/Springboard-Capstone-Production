@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+
 import numpy as np
 import torch
 
@@ -37,11 +37,8 @@ def decode_segmap(label_mask, dataset, plot=False):
     rgb[:, :, 0] = r / 255.0
     rgb[:, :, 1] = g / 255.0
     rgb[:, :, 2] = b / 255.0
-    if plot:
-        plt.imshow(rgb)
-        plt.show()
-    else:
-        return rgb
+
+    return rgb
 
 
 def encode_segmap(mask):
